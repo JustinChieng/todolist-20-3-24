@@ -10,18 +10,6 @@ export default function TodoList(props) {
       style={{ maxWidth: "500px", margin: "60px auto" }}
     >
       <div className="card-body">
-        {todos.map((todo) => {
-          const { name, id } = todo;
-          return (
-            <TodoItem
-              name={name}
-              id={id}
-              onDelete={(id) => {
-                setTodos(todos.filter((s) => s.id !== id));
-              }}
-            />
-          );
-        })}
         <AddForm todos={todos} setTodos={setTodos} />
       </div>
     </div>
